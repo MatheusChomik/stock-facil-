@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<!--
+    ============================================
+    TELA 5 - ENTRADA DE ESTOQUE
+    Feita por: Vitor Bessa Nunes
+    ============================================
+    O QUE ESSA TELA FAZ:
+    Formulario que o administrador usa quando chega mais
+    mercadoria no estoque. Ele digita qual produto chegou
+    e quantas unidades, e clica em Confirmar Entrada.
+
+    PRINCIPAIS PARTES DO CODIGO:
+    - <aside class="sidebar">: menu lateral (igual em todas as telas)
+    - <main class="conteudo">: area com o titulo e o formulario
+    - <form class="form-entrada">: o formulario com 2 campos:
+        1. Campo "Produto" (texto): nome do produto
+        2. Campo "Quantidade a adicionar" (numero): unidades que chegaram
+        3. Botao "Confirmar Entrada": envia o formulario
+
+    COMO ADICIONAR UM NOVO CAMPO NO FORMULARIO:
+    Antes do <button>, adicionar:
+        <label>Nome do Campo</label>
+        <input type="text">     <- ou number, date, etc.
+-->
+
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">

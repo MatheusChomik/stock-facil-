@@ -1,4 +1,29 @@
 <!DOCTYPE html>
+<!--
+    ============================================
+    TELA 4 - LISTA DE PRODUTOS
+    Feita por: Vitor Bessa Nunes
+    ============================================
+    O QUE ESSA TELA FAZ:
+    Mostra uma tabela com todos os produtos do estoque.
+    Cada linha tem: ID do produto, Nome e Quantidade em estoque.
+
+    PRINCIPAIS PARTES DO CODIGO:
+    - <aside class="sidebar">: menu lateral (igual em todas as telas)
+    - <main class="conteudo">: area com o titulo e a tabela
+    - <table class="tabela-produtos">: a tabela em si
+        - <thead>: cabecalho (ID, Nome, Estoque)
+        - <tbody>: corpo da tabela, com os produtos
+
+    COMO ADICIONAR UM NOVO PRODUTO NA TABELA:
+    Dentro do <tbody>, copiar um <tr> existente e mudar os valores:
+        <tr>
+            <td>#03</td>                  <- ID do produto
+            <td>Feijao Carioca 1kg</td>   <- nome do produto
+            <td>200</td>                  <- quantidade em estoque
+        </tr>
+-->
+
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">

@@ -554,6 +554,13 @@ body {
   margin-bottom: 40px;
 }
 
+/* ============================================
+   ESTILOS DA TELA 4 - LISTA DE PRODUTOS (Vitor)
+   ============================================
+   .tabela-produtos      = a tabela inteira
+   .tabela-produtos th   = cabecalho (ID, Nome, Estoque)
+   .tabela-produtos td   = celulas com os dados dos produtos
+*/
 .tabela-produtos {
   width: 85%;
   border-collapse: collapse;
@@ -584,6 +591,14 @@ body {
 .acao:hover {
   background: #00d1a5;
 }
+/* ============================================
+   ESTILOS DA TELA 5 - ENTRADA DE ESTOQUE (Vitor)
+   ============================================
+   .form-entrada         = o formulario inteiro
+   .form-entrada label   = titulo de cada campo (Produto, Quantidade)
+   .form-entrada input   = caixa de digitar (texto ou numero)
+   .form-entrada button  = botao "Confirmar Entrada"
+*/
 .form-entrada {
   margin-top: 70px;
   max-width: 380px;
