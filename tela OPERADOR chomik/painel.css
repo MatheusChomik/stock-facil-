@@ -1,0 +1,89 @@
+#tela-painel {
+  flex: 1;
+  padding: 32px;
+}
+
+.titulo-painel {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.barralateral-nav div:first-child {
+  background: rgba(0,212,200,.1);
+  color: #00d4c8;
+}
+
+.status-pedidos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.status-pedidos > div {
+  background: #D9D9D9;
+  border: 1px solid #1e3045;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.status-label {
+  font-size: 11px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.status-valor {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.status-card-pendentes .status-valor { color: #f59e0b; }
+.status-card-separacao  .status-valor { color: #3b9eff; }
+.status-card-enviados   .status-valor { color: #00d4c8; }
+.status-card-atrasadas  .status-valor { color: #ef4444; }
+
+.tabela-card {
+  background: #D9D9D9;
+  border: 1px solid #1e3045;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tabela-card-cabecalho {
+  padding: 16px 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #1e3045;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 11px;
+  color: #000000;
+  border-bottom: 1px solid #1e3045;
+}
+
+td {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+td button {
+  background: transparent;
+  border: 1px solid #1e3045;
+  color: #000000;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}

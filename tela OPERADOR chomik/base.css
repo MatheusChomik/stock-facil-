@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  background: #D9D9D9;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.barralateral {
+  width: 165px;
+  min-width: 165px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #051923;
+  border-right: 1px solid #1e3045;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.barralateral-logo {
+  padding: 0 16px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00FFC3;
+}
+
+.barralateral > div:nth-child(2) {
+  padding: 0 16px 10px;
+  font-size: 10px;
+  color: #2e4a62;
+  text-transform: uppercase;
+}
+
+.barralateral-nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.barralateral-nav div {
+  padding: 10px 16px;
+  color: #5a7a95;
+  cursor: pointer;
+}
+
+.barralateral-nav a {
+  color: #5a7a95;
+  text-decoration: none;
+}
+
+.barralateral-sair {
+  padding: 12px 16px 0;
+  border-top: 1px solid #1e3045;
+}
+
+.barralateral-sair button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #1e3045;
+  color: #5a7a95;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Inputs padrão para fundo claro */
+input,
+select,
+textarea {
+  background: #D9D9D9;
+  color: #000000;
+  border: 1px solid #bfbfbf;
+  border-radius: 6px;
+  padding: 8px 10px;
+}

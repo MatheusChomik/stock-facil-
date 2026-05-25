@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movimentações</title>
+  <link rel="stylesheet" href="movimentacoes.css">
+</head>
+
+<body>
+
+  
+  <aside class="sidebar">
+
+    <div>
+
+      <!-- LOGO -->
+      <div class="logo">StockFácil</div>
+
+      <!-- MENU -->
+      <div class="menu">
+
+        <h4>PAINEL DO OPERADOR</h4>
+
+        <a href="painel.html">Painel</a>
+        <a href="atualizar.html">Atualizar Pedidos</a>
+        <a href="movimentacoes.html">Movimentações</a>
+
+        <a href="envio-entrega.html">Envio e Entrega</a>
+      </div>
+
+    </div>
+
+    <div class="logout">Sair</div>
+
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="content">
+
+    <h1 class="title">Movimentações</h1>
+
+    <p class="subtitle">Entradas e saídas do estoque</p>
+
+    <div class="buttons">
+
+      <button class="entrada">+ Nova Entrada</button>
+
+      <button class="saida">+ Registrar Saída</button>
+
+    </div>
+
+    <!-- Caixa da tabela -->
+    <div class="table-box">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>DATA</th>
+            <th>PRODUTO</th>
+            <th>TIPO</th>
+            <th>QUANTIDADE</th>
+            <th>RESPONSÁVEL</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+
+          <tr>
+            <td>13/04/2026</td>
+            <td>Arroz Tio Urbano 5kg</td>
+
+            <td>
+              <span class="badge entrada-badge">Entrada</span>
+            </td>
+
+            <td>+50 un.</td>
+            <td>Operador 1</td>
+          </tr>
+
+          <tr>
+            <td>13/04/2026</td>
+            <td>Óleo de Soja 900ml</td>
+
+           
+            <td>
+              <span class="badge saida-badge">Saída</span>
+            </td>
+
+            <td>-12 un.</td>
+            <td>Operador 2</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

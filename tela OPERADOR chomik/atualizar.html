@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Pedidos - Stockfácil</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="atualizar.css">
+</head>
+
+<body>
+
+    <aside class="barralateral">
+        <div class="barralateral-logo">Stock Fácil</div>
+        <div>Atualizar Pedidos</div>
+        <nav class="barralateral-nav">
+            <div><a href="painel.html">Painel</a></div>
+            <div>Atualizar Pedidos</div>
+            <div><a href="movimentacoes.html">Movimentações</a></div>
+            <div><a href="envio-entrega.html">Envio e Entrega</a></div>
+        </nav>
+        <div class="barralateral-sair">
+            <button>Sair</button>
+        </div>
+    </aside>
+
+    <div id="tela-painel">
+
+        <div class="titulo-painel">Atualizar Pedidos</div>
+
+        <input class="barra-de-pesquisa" type="text" placeholder="buscar pedido por cliente ou numero...">
+
+        <div class="pedido-card">
+
+            <div class="pedido-header">
+                <h3>Pedido #1042 — Maria Silva</h3>
+                <h3>Pendente</h3>
+            </div>
+
+            <div class="pedido-colunas">
+                <h4>Produto</h4>
+                <h4>Quantidade</h4>
+                <h4>Valor Unit.</h4>
+                <h4>Subtotal</h4>
+            </div>
+
+            <div class="pedido-linha">
+                <h4>Arroz Tio Urbano 5kg</h4>
+                <h4>2</h4>
+                <h4>R$ 22,90</h4>
+                <h4>R$ 45,80</h4>
+            </div>
+
+            <div class="pedido-linha">
+                <h4>Feijão Carioca 1kg</h4>
+                <h4>3</h4>
+                <h4>R$ 8,00</h4>
+                <h4>R$ 24,00</h4>
+            </div>
+
+            <div class="pedido-linha">
+                <h4>Óleo de Soja 900ml</h4>
+                <h4>1</h4>
+                <h4>R$ 8,50</h4>
+                <h4>R$ 8,50</h4>
+            </div>
+
+            <div class="pedido-form">
+                <div class="formulario">
+                    <label>Alterar Status</label>
+                    <select>
+                        <option>Pendente</option>
+                        <option>Em Separação</option>
+                        <option>Aprovado</option>
+                        <option>Em Rota</option>
+                        <option>Entregue</option>
+                    </select>
+                </div>
+                <div class="formulario">
+                    <label>Código do Rastreamento</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <button>Salvar Alterações</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

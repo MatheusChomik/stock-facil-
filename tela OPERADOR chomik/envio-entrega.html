@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio e Entrega</title>
+  <link rel="stylesheet" href="envio-entrega.css">
+
+</head>
+
+<body>
+
+ 
+  <aside class="sidebar">
+
+    <div>
+
+      <!-- LOGO -->
+      <div class="logo">StockFácil</div>
+
+      <div class="menu">
+
+        <h4>PAINEL DO OPERADOR</h4>
+
+        <a href="painel.html">Painel</a>
+        <a href="atualizar.html">Atualizar Pedidos</a>
+        <a href="movimentacoes.html">Movimentações</a>
+
+        <a href="#" class="active">Envio e Entrega</a>
+
+      </div>
+
+    </div>
+
+    <div class="logout">Sair</div>
+
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+
+    <h1 class="title">Envio e Entrega</h1>
+    <p class="subtitle">Controle logístico</p>
+
+    <!-- TABELA -->
+    <div class="table-box">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Nº PEDIDO</th>
+            <th>CLIENTE</th>
+            <th>ENDEREÇO</th>
+            <th>TRANSPORTADORA</th>
+            <th>STATUS</th>
+            <th>AÇÕES</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>#1042</td>
+            <td>Maria Silva</td>
+            <td>Rua das Flores, 123</td>
+            <td>Correios - SEDEX</td>
+
+            <!-- STATUS -->
+            <td>
+              <span class="status aprovado">Aprovado</span>
+            </td>
+
+            <td>
+              <button class="btn ver">Ver</button>
+              <button class="btn ver">Rastreio</button>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td>#1059</td>
+            <td>Ana Costa</td>
+            <td>Av. Brasil, 456</td>
+            <td>Jadlog</td>
+
+            <td>
+              <span class="status enviado">Enviado</span>
+            </td>
+
+            <td>
+              <button class="btn confirmar">
+                Confirmar Entrega
+              </button>
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

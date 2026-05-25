@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Stockfacil</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="painel.css">
+</head>
+
+<body>
+
+    <!-- barra lateral -->
+
+    <aside class="barralateral">
+        <div class="barralateral-logo">Stock Fácil</div>
+        <div>Painel do Operador</div>
+        <nav class="barralateral-nav">
+            <div>Painel</div>
+            <div><a href="atualizar.html">Atualizar Pedidos</a></div>
+            <div><a href="movimentacoes.html"></a>Movimentações</a></div>
+            <div><a href="envio-entrega.html">Envio e Entrega</a></div>
+        </nav>
+        <div class="barralateral-sair">
+            <button>Sair</button>
+        </div>
+    </aside>
+
+    <!-- tela 1 (painel) -->
+
+    <div id="tela-painel">
+        <h1 class="titulo-painel">Painel do Operador</h1>
+
+        <div class="status-pedidos">
+            <div class="status-card-pendentes">
+                <div class="status-label">Pedidos Pendentes</div>
+                <div class="status-valor">12</div>
+            </div>
+            <div class="status-card-separacao">
+                <div class="status-label">Em separação</div>
+                <div class="status-valor">05</div>
+            </div>
+            <div class="status-card-enviados">
+                <div class="status-label">Enviados</div>
+                <div class="status-valor">18</div>
+            </div>
+            <div class="status-card-atrasadas">
+                <div class="status-label">Entregas atrasadas</div>
+                <div class="status-valor">02</div>
+            </div>
+        </div>
+
+        <div class="tabela-card">
+            <div class="tabela-card-cabecalho">Pedidos Pendentes</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nº Pedido</th>
+                        <th>Cliente</th>
+                        <th>Itens</th>
+                        <th>Status</th>
+                        <th>Data</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1042</td>
+                        <td>Maria Silva</td>
+                        <td>3 Itens</td>
+                        <td>Pendente</td>
+                        <td>13/04/2026</td>
+                        <td><button>Abrir</button></td>
+                    </tr>
+                    <tr>
+                        <td>#1041</td>
+                        <td>João Pereira</td>
+                        <td>1 Item</td>
+                        <td>Em Separação</td>
+                        <td>13/04/2026</td>
+                        <td><button>Abrir</button></td>
+                    </tr>
+                    <tr>
+                        <td>#1039</td>
+                        <td>Ana Costa</td>
+                        <td>5 Itens</td>
+                        <td>Pendente</td>
+                        <td>12/04/2026</td>
+                        <td><button>Abrir</button></td>
+                    </tr>
+                    <tr>
+                        <td>#1036</td>
+                        <td>Carlos Mendes</td>
+                        <td>2 Itens</td>
+                        <td>Entregue</td>
+                        <td>12/04/2026</td>
+                        <td><button>Abrir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

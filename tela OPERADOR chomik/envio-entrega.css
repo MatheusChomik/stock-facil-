@@ -1,0 +1,190 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body{
+  display:flex;
+  background:#D9D9D9;
+  color:#000000;
+  height:100vh;
+}
+
+/* MENU */
+.sidebar{
+  width:240px;
+  background:#051923;
+
+  padding:20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  border-right:1px solid #13263d;
+}
+
+/* LOGO */
+.logo{
+  font-size:24px;
+  font-weight:bold;
+
+  margin-bottom:40px;
+
+  color:#00FFC3;
+}
+
+/* TEXTO MENU */
+.menu h4{
+  font-size:12px;
+  color:#FFFFFF;
+
+  margin-bottom:20px;
+}
+
+/* LINKS */
+.menu a{
+  display:block;
+
+  text-decoration:none;
+
+  color:#FFFFFF;
+
+  padding:14px;
+
+  border-radius:10px;
+
+  margin-bottom:10px;
+
+  transition:0.3s;
+}
+
+/* HOVER */
+.menu a:hover,
+.menu .active{
+  background:#00c2c7;
+  color:white;
+}
+
+/* SAIR */
+.logout{
+  color:#ff7b7b;
+  cursor:pointer;
+}
+
+/* CONTEÚDO */
+.content{
+  flex:1;
+  padding:40px;
+}
+
+/* TÍTULO */
+.title{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+/* SUBTÍTULO */
+.subtitle{
+  color:#000000;
+  margin-bottom:30px;
+}
+
+/* CAIXA DA TABELA */
+.table-box{
+  background:#D9D9D9;
+
+  border-radius:15px;
+
+  padding:20px;
+
+  border:1px solid #17304d;
+}
+
+/* TABELA */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+/* CABEÇALHO */
+th{
+  text-align:left;
+
+  color:#000000;
+
+  padding-bottom:15px;
+
+  font-size:14px;
+}
+
+/* LINHAS */
+td{
+  padding:14px 0;
+
+  border-top:1px solid #13263d;
+
+  font-size:14px;
+}
+
+/* STATUS */
+.status{
+  padding:6px 12px;
+
+  border-radius:20px;
+
+  font-size:12px;
+
+  font-weight:bold;
+}
+
+/* STATUS APROVADO */
+.aprovado{
+  background:#00c27a33;
+  color:#00ff9d;
+}
+
+/* STATUS ENVIADO */
+.enviado{
+  background:#00bfff33;
+  color:#4fd8ff;
+}
+
+/* STATUS ENTREGUE */
+.entregue{
+  background:#9cff0033;
+  color:#c6ff62;
+}
+
+/* BOTÕES */
+.btn{
+  padding:8px 14px;
+
+  border:none;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+  font-weight:bold;
+
+  margin-right:8px;
+}
+
+/* BOTÃO VER */
+.ver{
+  background:#00d4c7;
+  color:#04111f;
+}
+
+/* BOTÃO CONFIRMAR */
+.confirmar{
+  background:#86ff5d;
+  color:#04111f;
+}
