@@ -303,3 +303,39 @@ tbody td button {
   color: #00c853;
   font-weight: bold;
 }
+
+/* Gestão de Usuários */
+.card-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-novo {
+  padding: 8px 16px;
+  background: #1a1d2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-novo:hover {
+  background: #2a2d3e;
+}
+
+.btn-excluir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  color: #e53935;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-excluir:hover {
+  background: #fdecea;
+}

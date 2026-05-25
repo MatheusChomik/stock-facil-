@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stock Fácil – Gestão de Usuários</title>
+  <link rel="stylesheet" href="stylerafael.css" />
+</head>
+<body>
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>Stock Fácil</h1>
+      <p>Painel do Administrador</p>
+    </div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <span class="section-label">Gestão de Estoque</span>
+      <a href="cadastrodeprodutos.html">Cadastro de Produtos</a>
+      <a href="listadeprodutos.html">Lista de Produtos</a>
+      <a href="entradadeestoque.html">Entrada de Estoque</a>
+      <span class="section-label">Operações e Relatórios</span>
+      <a href="registrovendas.html">Registro de Vendas</a>
+      <a href="painelderelatorio.html">Painel de Relatório</a>
+      <a href="alertasdeestoque.html">Alertas de Estoque</a>
+      <span class="section-label">Configurações</span>
+      <a href="gestaodeusuarios.html" class="active">Gestão de Usuários</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html">Sair</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <h2>Gestão de Usuários</h2>
+    <div class="card">
+      <div class="card-header">
+        <button class="btn-novo">+ Novo Usuário</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Papel</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Operador 1</td>
+            <td>operador1@email.com</td>
+            <td>Administrador</td>
+            <td><button class="btn-excluir">🗑</button></td>
+          </tr>
+          <tr>
+            <td>Operador 2</td>
+            <td>operador2@email.com</td>
+            <td>Operador</td>
+            <td><button class="btn-excluir">🗑</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+</body>
+</html>
