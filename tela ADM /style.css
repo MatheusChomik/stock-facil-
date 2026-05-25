@@ -617,3 +617,14 @@ body {
   margin-top: 75px;
   margin-left: 150px;
 }
+
+.botao {
+  background: #00AD85;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
