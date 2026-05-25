@@ -1,0 +1,127 @@
+:root {
+  --primary: #008000;
+  --primary-dark: #008000;
+  --secondary: #10b981;
+  --background: #051923;
+  --surface: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --success: #22c55e;
+  --error: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #190523;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: rgba(30, 41, 59, 0.95);
+  border-bottom: 2px solid var(--primary);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card-form {
+  background: #FFFFFF;
+  border: 2px solid #00ad85;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-form h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #00ad85;
+}
+
+.card-form p {
+  text-align: center;
+  color: #A0A0A0;
+  margin-bottom: 16px;
+}
+
+.card-form label {
+  display: block;
+  color: #000000;
+  font-size: 14px;
+}
+
+.card-form input[type="text"],
+.card-form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #CCCCCC;
+  background: #F5F5F5;
+  color: #000000;
+  outline: none;
+}
+
+.card-form input[type="text"]:focus,
+.card-form input[type="password"]:focus {
+  box-shadow: 0 0 0 3px rgba(0, 173, 133, 0.2);
+  border-color: #00ad85;
+}
+
+.card-form button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #00ad85;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.card-form h6 {
+  text-align: center;
+  margin-top: 12px;
+  color: #A0A0A0;
+}
