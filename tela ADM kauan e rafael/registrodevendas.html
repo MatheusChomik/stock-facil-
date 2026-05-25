@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Facil - Registro De Vendas</title>
+    <link rel="stylesheet" href="stylerafael.css"/>
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <h1>Stock Facil</h1>
+            <p>Painel do Administrador</p>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="cadastrodeprodutos.html">Cadastro De Produtos</a>
+                <a href="listadeprodutos.html">Lista De Produtos</a>
+                <a href="entradadeestoque.html">Entrada De Estoque</a>
+                <a href="#" class="active">Registro De Vendas</a>
+                <a href="painelderelatorio.html">Painel De Relatorio</a>
+                <a href="alertasdeestoque.html">Alertas De Estoques</a>
+                <a href="gestãodeusuários.html">Gestao De Usuarios</a>
+                <a href="login.html">Sair</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <h2>Registro de Vendas</h2>
+
+            <input type="text" id="busca" placeholder="buscar por produto" oninput="filtrar()"/>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qtd</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela"></tbody>
+            </table>
+
+            <p class="total">total <strong id="total">R$0,00</strong></p>
+        </main>
+
+    </div>
+
+    <script>
+        const vendas = [
+            { id: 1, item: 'Arroz Tio Urbano 5kg', qtd: 58, preco: 5.52 }
+        ];
+
+        function fmt(v) {
+            return 'R$' + v.toFixed(2).replace('.', ',');
+        }
+
+        function renderizar(filtro = '') {
+            const tbody = document.getElementById('tabela');
+            const lista = vendas.filter(v => v.item.toLowerCase().includes(filtro.toLowerCase()));
+
+            tbody.innerHTML = lista.map(v => `
+                <tr>
+                    <td>${v.item}</td>
+                    <td>${v.qtd}</td>
+                    <td>${fmt(v.qtd * v.preco)}</td>
+                </tr>
+            `).join('');
+
+            const totalGeral = vendas.reduce((s, v) => s + v.qtd * v.preco, 0);
+            document.getElementById('total').textContent = fmt(totalGeral);
+        }
+
+        function filtrar() {
+            renderizar(document.getElementById('busca').value);
+        }
+
+        renderizar();
+    </script>
+
+</body>
+</html>

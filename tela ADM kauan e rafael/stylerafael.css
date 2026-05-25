@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  min-width: 220px;
+  background: #12141f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.brand {
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid #2a2d3e;
+  margin-bottom: 10px;
+}
+
+.sidebar h1 {
+  font-size: 20px;
+  color: #00e676;
+  font-weight: bold;
+}
+
+.sidebar p {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 12px;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  padding: 9px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: block;
+}
+
+nav a:hover {
+  background: #1e2133;
+  color: white;
+}
+
+nav a.active {
+  color: #00e676;
+  font-weight: bold;
+}
+
+.section-label {
+  font-size: 10px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 14px 10px 4px;
+  display: block;
+}
+
+.sidebar-footer {
+  padding: 16px 20px 0;
+  border-top: 1px solid #2a2d3e;
+  margin-top: 16px;
+}
+
+.sidebar-footer a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.sidebar-footer a:hover {
+  color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 32px;
+  background-color: #e8eaf0;
+}
+
+.main h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1d2e;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.label-busca {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#busca {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+#busca:focus {
+  border-color: #00c853;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #999;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+td {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+tbody td button {
+  background: none;
+  border: none;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: #00c853;
+}
+
+.form button {
+  padding: 8px 20px;
+  background: #00e676;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #00c853;
+}
+
+.total {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.total strong {
+  color: #1b5e20;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.ficticio {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.chart-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.chart-wrap {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.chart-wrap h4 {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.chart-wrap canvas {
+  width: 100% !important;
+  height: 280px !important;
+  display: block;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 180px;
+}
+
+.stat-box p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.stat-box strong {
+  font-size: 18px;
+  color: #00c853;
+  font-weight: bold;
+}
+
+.stat-box strong.neutro {
+  color: #333;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1d2e;
+  margin: 28px 0 16px;
+}
+
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.alert-item .restam {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.alert-item .ok {
+  color: #00c853;
+  font-weight: bold;
+}

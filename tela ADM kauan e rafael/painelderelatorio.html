@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Facil - Painel de Relatório</title>
+    <link rel="stylesheet" href="stylerafael.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>Stock Fácil</h1>
+                <p>Painel do Administrador</p>
+            </div>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <span class="section-label">Gestão de Estoque</span>
+                <a href="cadastrodeprodutos.html">Cadastro de Produtos</a>
+                <a href="listadeprodutos.html">Lista de Produtos</a>
+                <a href="entradadeestoque.html">Entrada de Estoque</a>
+                <span class="section-label">Operações e Relatórios</span>
+                <a href="registrodevendas.html">Registro de Vendas</a>
+                <a href="#" class="active">Painel de Relatório</a>
+                <a href="alertasdeestoque.html">Alertas de Estoque</a>
+                <span class="section-label">Configurações</span>
+                <a href="gestãodeusuários.html">Gestão de Usuários</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="login.html">Sair</a>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <h2>Painel de Relatório</h2>
+
+            <div class="card">
+                <p class="ficticio">Fictício</p>
+                <div class="chart-section">
+                    <div class="chart-wrap">
+                        <h4>Faturamento Mensal (R$)</h4>
+                        <canvas id="grafico" height="120"></canvas>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <p>Total Vendido hoje:</p>
+                            <strong>R$1250,00</strong>
+                        </div>
+                        <div class="stat-box">
+                            <p>Ticket Médio:</p>
+                            <strong class="neutro">R$85,00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="section-title">Alertas de Estoque</p>
+
+            <div class="card">
+                <div class="alert-list" id="alertas"></div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('grafico');
+
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                    datasets: [{
+                        label: 'Faturamento',
+                        data: [5200, 7800, 5100, 9500, 8200, 13000],
+                        backgroundColor: '#00c853',
+                        borderRadius: 8,
+                        maxBarThickness: 32
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            grid: { display: false }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: value => value.toLocaleString('pt-BR')
+                            },
+                            grid: {
+                                color: 'rgba(148, 163, 184, 0.15)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        const produtos = [
+            { nome: 'Arroz Tio Urbano 5kg', estoque: 3, minimo: 10 },
+            { nome: 'Feijão Carioca 1kg', estoque: 1, minimo: 5 },
+            { nome: 'Óleo de Soja 900ml', estoque: 12, minimo: 10 },
+            { nome: 'Açúcar Cristal 1kg', estoque: 0, minimo: 8 },
+            { nome: 'Macarrão Espaguete', estoque: 20, minimo: 10 }
+        ];
+
+        const lista = document.getElementById('alertas');
+
+        if (lista) {
+            lista.innerHTML = produtos.map((produto) => {
+                let label = <span class="ok">OK (${produto.estoque} un.)</span>;
+
+                if (produto.estoque === 0) {
+                    label = '<span class="restam">Sem estoque!</span>';
+                } else if (produto.estoque <= produto.minimo) {
+                    label = <span class="restam">Restam ${produto.estoque} un.</span>;
+                }
+
+                return <div class="alert-item"><span>${produto.nome}</span>${label}</div>;
+            }).join('');
+        }
+    </script>
+
+</body>
+</html>
