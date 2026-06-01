@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Facil - Painel de Relatório</title>
     <link rel="stylesheet" href="stylerafael.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -42,7 +41,7 @@
                 <div class="chart-section">
                     <div class="chart-wrap">
                         <h4>Faturamento Mensal (R$)</h4>
-                        <canvas id="grafico" height="120"></canvas>
+                        <div class="chart-simple" id="grafico"></div>
                     </div>
                     <div class="stats">
                         <div class="stat-box">
@@ -67,45 +66,26 @@
     </div>
 
     <script>
-        const canvas = document.getElementById('grafico');
+        const chart = document.getElementById('grafico');
 
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
+        if (chart) {
+            const labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'];
+            const data = [5200, 7800, 5100, 9500, 8200, 13000];
+            const maxValue = Math.max(...data);
 
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
-                    datasets: [{
-                        label: 'Faturamento',
-                        data: [5200, 7800, 5100, 9500, 8200, 13000],
-                        backgroundColor: '#00c853',
-                        borderRadius: 8,
-                        maxBarThickness: 32
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false }
-                    },
-                    scales: {
-                        x: {
-                            grid: { display: false }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: value => value.toLocaleString('pt-BR')
-                            },
-                            grid: {
-                                color: 'rgba(148, 163, 184, 0.15)'
-                            }
-                        }
-                    }
-                }
-            });
+            chart.innerHTML = labels.map((label, index) => {
+                const value = data[index];
+                const width = (value / maxValue) * 100;
+                return `
+                    <div class="chart-bar">
+                        <span class="bar-label">${label}</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: ${width}%"></div>
+                        </div>
+                        <span class="bar-value">R$ ${value.toLocaleString('pt-BR')}</span>
+                    </div>
+                `;
+            }).join('');
         }
 
         const produtos = [
@@ -120,15 +100,15 @@
 
         if (lista) {
             lista.innerHTML = produtos.map((produto) => {
-                let label = <span class="ok">OK (${produto.estoque} un.)</span>;
+                let label = `<span class="ok">OK (${produto.estoque} un.)</span>`;
 
                 if (produto.estoque === 0) {
                     label = '<span class="restam">Sem estoque!</span>';
                 } else if (produto.estoque <= produto.minimo) {
-                    label = <span class="restam">Restam ${produto.estoque} un.</span>;
+                    label = `<span class="restam">Restam ${produto.estoque} un.</span>`;
                 }
 
-                return <div class="alert-item"><span>${produto.nome}</span>${label}</div>;
+                return `<div class="alert-item"><span>${produto.nome}</span>${label}</div>`;
             }).join('');
         }
     </script>
