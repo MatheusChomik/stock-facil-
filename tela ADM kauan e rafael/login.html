@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login operador</title>
+    <title>Login</title>
     <link rel="stylesheet" href="stylekauan.css">
-    
 </head>
 <body>
-    <form>
+    <form id="loginForm">
         <header>
             <div class="logo">STOCK<span>fácil</span></div>
         </header>
 
         <main class="container">
             <section class="card-form">
-                <h1> STOCK fácil </h1>
-                <P>Sistemas de Controle de Estoque e Vendas</P>
+                <h1>STOCK fácil</h1>
+                <p>Sistemas de Controle de Estoque e Vendas</p>
 
                 <div>
-                    <label>usuário </label>
-                    <input type="text">
+                    <label>Usuário</label>
+                    <input type="text" id="usuario" required>
                 </div>
+
                 <div>
-                    <label>senha </label>
-                    <input type="password">
+                    <label>Senha</label>
+                    <input type="password" id="senha" required>
                 </div>
-                <a href="dashboard.html" class="botao">Acessar Sistema</a>
-                <h6>esqueceu a senha?</h6>
+
+                <button type="submit" class="botao">
+                    Acessar Sistema
+                </button>
+
+                <h6>Esqueceu a senha?</h6>
             </section>
         </main>
     </form>
+
+    <script src="login.js"></script>
 </body>
 </html>
