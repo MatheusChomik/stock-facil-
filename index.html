@@ -2,8 +2,127 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=adm/login.html">
-  <title>Stock Fácil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Controle de Estoque Simples</title>
+  <meta name="description" content="Sistema de controle de estoque para empresas: produtos, entradas e saídas, pedidos, relatórios e alertas. Para administradores e operadores.">
+  <link rel="stylesheet" href="assets/landing.css">
 </head>
-<body></body>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Stock Fácil"></a>
+      <nav class="nav-links">
+        <a href="#recursos">Recursos</a>
+        <a href="#perfis">Perfis</a>
+        <a href="tutorial.html">Tutorial</a>
+      </nav>
+      <a href="adm/login.html" class="btn-cta">Entrar</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="badge-hero">Sistema de Controle de Estoque</span>
+      <h1>Controle seu estoque <span>sem complicação</span></h1>
+      <p>
+        Cadastre produtos, registre entradas e saídas, gerencie pedidos e
+        acompanhe faturamento e alertas — tudo em um painel claro, pensado
+        para administradores e operadores.
+      </p>
+      <div class="hero-acoes">
+        <a href="adm/login.html" class="btn-cta grande">Acessar o Sistema</a>
+        <a href="tutorial.html" class="btn-ghost grande">Ver tutorial →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section class="secao" id="recursos">
+    <div class="secao-inner">
+      <h2>Tudo que você precisa pra controlar o estoque</h2>
+      <p class="secao-sub">Quatro pilares que cobrem do cadastro do produto até a entrega ao cliente.</p>
+
+      <div class="grid-recursos">
+        <article class="recurso">
+          <div class="recurso-ico">📦</div>
+          <h3>Gestão de Produtos</h3>
+          <p>Cadastre, edite e exclua produtos com preço de custo, preço de venda e estoque mínimo.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-ico">📥</div>
+          <h3>Controle de Estoque</h3>
+          <p>Registre entradas e saídas e mantenha um histórico completo de movimentações.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-ico">🚚</div>
+          <h3>Pedidos &amp; Entregas</h3>
+          <p>Acompanhe pedidos do "Pendente" ao "Entregue", com rastreamento e transportadora.</p>
+        </article>
+        <article class="recurso">
+          <div class="recurso-ico">📊</div>
+          <h3>Relatórios &amp; Alertas</h3>
+          <p>Veja faturamento, produtos mais vendidos e seja avisado quando o estoque ficar crítico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIS -->
+  <section class="secao secao-alt" id="perfis">
+    <div class="secao-inner">
+      <h2>Dois perfis, cada um com seu painel</h2>
+      <p class="secao-sub">O acesso é separado por papel — cada pessoa vê só o que precisa.</p>
+
+      <div class="grid-perfis">
+        <div class="perfil-card adm">
+          <span class="tag">Administrador</span>
+          <h3>Visão completa do negócio</h3>
+          <p>Gerencia o catálogo, o estoque e acompanha os números.</p>
+          <ul class="perfil-lista">
+            <li>Dashboard com faturamento e estoque crítico</li>
+            <li>Cadastro, edição e exclusão de produtos</li>
+            <li>Entrada de estoque e registro de vendas</li>
+            <li>Painel de relatórios e alertas</li>
+            <li>Gestão de usuários do sistema</li>
+          </ul>
+        </div>
+
+        <div class="perfil-card op">
+          <span class="tag">Operador</span>
+          <h3>Foco na operação do dia a dia</h3>
+          <p>Cuida dos pedidos, das movimentações e das entregas.</p>
+          <ul class="perfil-lista">
+            <li>Painel de pedidos por status</li>
+            <li>Atualização de status e rastreamento</li>
+            <li>Registro de movimentações de estoque</li>
+            <li>Controle de envio e entrega</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>Pronto pra começar?</h2>
+    <p>Acesse o sistema ou veja o passo a passo de uso.</p>
+    <div class="hero-acoes">
+      <a href="adm/login.html" class="btn-cta grande">Acessar o Sistema</a>
+      <a href="tutorial.html" class="btn-ghost grande">Ver tutorial →</a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <img src="assets/logo.png" alt="Stock Fácil">
+    <p>Projeto acadêmico de controle de estoque — feito com HTML, CSS, JavaScript e Supabase.</p>
+    <div class="rodape-links">
+      <a href="adm/login.html">Entrar</a> · <a href="tutorial.html">Tutorial</a>
+    </div>
+  </footer>
+
+</body>
 </html>

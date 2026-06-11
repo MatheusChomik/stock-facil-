@@ -27,7 +27,7 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="login.html" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -35,17 +35,23 @@
     <h1>Entrada de Estoque</h1>
 
     <div class="form-box">
-      <form>
-        <label>Produto</label>
-        <input type="text" placeholder="Nome ou código do produto">
+      <div id="msg" class="msg" style="display:none"></div>
+      <form id="formEntrada">
+        <label for="selProduto">Produto</label>
+        <select id="selProduto" required>
+          <option value="">Carregando produtos…</option>
+        </select>
 
-        <label>Quantidade a Adicionar</label>
-        <input type="number" placeholder="0">
+        <label for="qtdEntrada">Quantidade a Adicionar</label>
+        <input type="number" id="qtdEntrada" placeholder="0" min="1" required>
 
         <button type="submit" class="btn btn-primary">Confirmar Entrada</button>
       </form>
     </div>
   </main>
 
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="entradadeestoque.js"></script>
 </body>
 </html>

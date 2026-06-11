@@ -9,11 +9,6 @@
     .pedido-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
     .pedido-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--border); }
     .pedido-header h3 { font-size: 14px; font-weight: 600; }
-    .pedido-colunas, .pedido-linha { display: grid; grid-template-columns: 3fr 1fr 1fr 1fr; padding: 10px 20px; }
-    .pedido-colunas { background: #fafafa; border-bottom: 1px solid var(--border); }
-    .pedido-colunas span { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
-    .pedido-linha { border-bottom: 1px solid var(--border); font-size: 13px; }
-    .pedido-linha:last-of-type { border-bottom: none; }
     .pedido-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px; border-top: 1px solid var(--border); }
     .pedido-form > div:last-child { grid-column: 1 / -1; }
   </style>
@@ -32,68 +27,21 @@
       <a href="envio-entrega.html">Envio e Entrega</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="../adm/login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
   <main class="conteudo">
     <h1>Atualizar Pedidos</h1>
 
-    <input class="barra-pesquisa" type="text" placeholder="Buscar pedido por cliente ou número...">
+    <input class="barra-pesquisa" type="text" id="busca" placeholder="Buscar pedido por cliente...">
 
-    <div class="pedido-card">
-      <div class="pedido-header">
-        <h3>Pedido #1042 — Maria Silva</h3>
-        <span class="badge badge-pendente">Pendente</span>
-      </div>
-
-      <div class="pedido-colunas">
-        <span>Produto</span>
-        <span>Quantidade</span>
-        <span>Valor Unit.</span>
-        <span>Subtotal</span>
-      </div>
-
-      <div class="pedido-linha">
-        <span>Arroz Tio Urbano 5kg</span>
-        <span>2</span>
-        <span>R$ 22,90</span>
-        <span>R$ 45,80</span>
-      </div>
-      <div class="pedido-linha">
-        <span>Feijão Carioca 1kg</span>
-        <span>3</span>
-        <span>R$ 8,00</span>
-        <span>R$ 24,00</span>
-      </div>
-      <div class="pedido-linha">
-        <span>Óleo de Soja 900ml</span>
-        <span>1</span>
-        <span>R$ 8,50</span>
-        <span>R$ 8,50</span>
-      </div>
-
-      <div class="pedido-form">
-        <div class="form-box" style="padding:0; border:none; background:transparent; max-width:100%;">
-          <label>Alterar Status</label>
-          <select>
-            <option>Pendente</option>
-            <option>Em Separação</option>
-            <option>Aprovado</option>
-            <option>Em Rota</option>
-            <option>Entregue</option>
-          </select>
-        </div>
-        <div class="form-box" style="padding:0; border:none; background:transparent; max-width:100%;">
-          <label>Código de Rastreamento</label>
-          <input type="text" placeholder="Ex: BR123456789">
-        </div>
-        <div>
-          <button class="btn btn-primary">Salvar Alterações</button>
-        </div>
-      </div>
-    </div>
+    <div id="listaPedidos"></div>
   </main>
+
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="atualizar.js"></script>
 
 </body>
 </html>

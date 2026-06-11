@@ -27,7 +27,7 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="login.html" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -35,29 +35,30 @@
     <h1>Cadastro de Produto</h1>
 
     <div class="form-box">
-      <form>
-        <label>Nome do Produto</label>
-        <input type="text" placeholder="Ex: Arroz Tio Urbano 5kg">
+      <div id="msg" class="msg" style="display:none"></div>
+      <form id="formProduto">
+        <label for="nome">Nome do Produto</label>
+        <input type="text" id="nome" placeholder="Ex: Arroz Tio Urbano 5kg" required>
 
         <div class="linha-form">
           <div>
-            <label>Quantidade</label>
-            <input type="number" placeholder="0">
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" placeholder="0" min="0" value="0">
           </div>
           <div>
-            <label>Estoque Mínimo</label>
-            <input type="number" placeholder="0">
+            <label for="estoqueMinimo">Estoque Mínimo</label>
+            <input type="number" id="estoqueMinimo" placeholder="0" min="0" value="0">
           </div>
         </div>
 
         <div class="linha-form">
           <div>
-            <label>Preço de Custo (R$)</label>
-            <input type="text" placeholder="0,00">
+            <label for="precoCusto">Preço de Custo (R$)</label>
+            <input type="text" id="precoCusto" placeholder="0,00">
           </div>
           <div>
-            <label>Preço de Venda (R$)</label>
-            <input type="text" placeholder="0,00">
+            <label for="precoVenda">Preço de Venda (R$)</label>
+            <input type="text" id="precoVenda" placeholder="0,00">
           </div>
         </div>
 
@@ -66,5 +67,8 @@
     </div>
   </main>
 
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="cadastrodeprodutos.js"></script>
 </body>
 </html>

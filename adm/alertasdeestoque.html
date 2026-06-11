@@ -27,7 +27,7 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -35,18 +35,13 @@
     <h1>Alertas de Estoque</h1>
 
     <div class="box">
-      <div class="alert-list">
-        <div class="alert-item">
-          <span>Arroz Tio Urbano 5kg</span>
-          <span class="restam">Restam 3 un.</span>
-        </div>
-        <div class="alert-item">
-          <span>Óleo de Soja 900ml</span>
-          <span class="ok">Estoque: 12 un.</span>
-        </div>
-      </div>
+      <div class="alert-list" id="listaAlertas"></div>
     </div>
   </main>
+
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="alertasdeestoque.js"></script>
 
 </body>
 </html>

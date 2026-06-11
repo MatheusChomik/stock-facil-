@@ -20,52 +20,34 @@
       <a href="envio-entrega.html" class="ativo">Envio e Entrega</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="../adm/login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
   <main class="conteudo">
     <h1>Envio e Entrega</h1>
-    <p style="color:var(--text-muted); margin-top:-18px; margin-bottom:24px; font-size:13px;">Controle logístico</p>
+    <p style="color:var(--text-muted); margin-top:-18px; margin-bottom:24px; font-size:13px;">Controle logístico — pedidos Aprovado e Em Rota</p>
 
     <div class="tabela-card">
       <table>
         <thead>
           <tr>
-            <th>Nº Pedido</th>
             <th>Cliente</th>
             <th>Endereço</th>
             <th>Transportadora</th>
+            <th>Rastreamento</th>
             <th>Status</th>
-            <th>Ações</th>
+            <th>Ação</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>#1042</td>
-            <td>Maria Silva</td>
-            <td>Rua das Flores, 123</td>
-            <td>Correios – SEDEX</td>
-            <td><span class="badge badge-enviado">Aprovado</span></td>
-            <td>
-              <button class="btn btn-secondary btn-sm">Ver</button>
-              <button class="btn btn-secondary btn-sm">Rastreio</button>
-            </td>
-          </tr>
-          <tr>
-            <td>#1059</td>
-            <td>Ana Costa</td>
-            <td>Av. Brasil, 456</td>
-            <td>Jadlog</td>
-            <td><span class="badge badge-separacao">Enviado</span></td>
-            <td>
-              <button class="btn btn-primary btn-sm">Confirmar Entrega</button>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="tbodyEnvio"></tbody>
       </table>
     </div>
   </main>
+
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="envio-entrega.js"></script>
 
 </body>
 </html>

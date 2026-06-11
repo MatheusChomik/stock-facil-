@@ -27,7 +27,7 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="login.html" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -37,32 +37,27 @@
     <section class="cards">
       <div class="card-stat">
         <p>Faturamento Total</p>
-        <strong>R$ 12.450,00</strong>
+        <strong id="statFaturamento">—</strong>
       </div>
       <div class="card-stat">
         <p>Vendas no Mês</p>
-        <strong>142</strong>
+        <strong id="statVendasMes">—</strong>
       </div>
       <div class="card-stat">
         <p>Produtos Cadastrados</p>
-        <strong>85</strong>
+        <strong id="statProdutos">—</strong>
       </div>
       <div class="card-stat alerta">
         <p>Estoque Crítico</p>
-        <strong>04</strong>
+        <strong id="statCritico">—</strong>
       </div>
     </section>
 
     <section class="painel-baixo">
       <div class="box">
         <h2>Notificações de Alerta</h2>
-        <div class="notificacao">
-          <p>Arroz Tio Urbano 5kg</p>
-          <span>Apenas 2 un. restantes</span>
-        </div>
-        <div class="notificacao">
-          <p>Óleo de Soja 900ml</p>
-          <span>Apenas 5 un. restantes</span>
+        <div id="listaNotificacoes">
+          <p class="vazio">Carregando…</p>
         </div>
       </div>
 
@@ -76,22 +71,16 @@
               <th>Faturamento</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Feijão Carioca 1kg</td>
-              <td>58</td>
-              <td>R$ 406,00</td>
-            </tr>
-            <tr>
-              <td>Leite Integral 1L</td>
-              <td>42</td>
-              <td>R$ 231,00</td>
-            </tr>
+          <tbody id="topVendidos">
+            <tr><td colspan="3" class="vazio">Carregando…</td></tr>
           </tbody>
         </table>
       </div>
     </section>
   </main>
 
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>

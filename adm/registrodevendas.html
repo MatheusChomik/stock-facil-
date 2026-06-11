@@ -27,14 +27,14 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
   <main class="conteudo">
     <h1>Registro de Vendas</h1>
 
-    <input class="barra-pesquisa" type="text" id="busca" placeholder="Buscar por produto..." oninput="filtrar()">
+    <input class="barra-pesquisa" type="text" id="busca" placeholder="Buscar por produto...">
 
     <div class="tabela-card">
       <table>
@@ -43,6 +43,7 @@
             <th>Produto</th>
             <th>Qtd. Vendida</th>
             <th>Total</th>
+            <th>Data</th>
           </tr>
         </thead>
         <tbody id="tabela"></tbody>
@@ -50,43 +51,13 @@
     </div>
 
     <p style="margin-top:16px; font-size:14px; color:#6b7280;">
-      Total geral: <strong id="total" style="color:#1a1f2e;">R$0,00</strong>
+      Total geral: <strong id="total" style="color:#1a1f2e;">R$ 0,00</strong>
     </p>
   </main>
 
-  <script>
-    const vendas = [
-      { item: 'Arroz Tio Urbano 5kg', qtd: 58, preco: 5.52 },
-      { item: 'Feijão Carioca 1kg',   qtd: 42, preco: 8.00 },
-    ];
-
-    function fmt(v) {
-      return 'R$ ' + v.toFixed(2).replace('.', ',');
-    }
-
-    function renderizar(filtro = '') {
-      const tbody = document.getElementById('tabela');
-      const lista  = vendas.filter(v => v.item.toLowerCase().includes(filtro.toLowerCase()));
-
-      tbody.innerHTML = lista.map(v => `
-        <tr>
-          <td>${v.item}</td>
-          <td>${v.qtd}</td>
-          <td>${fmt(v.qtd * v.preco)}</td>
-        </tr>
-      `).join('');
-
-      document.getElementById('total').textContent = fmt(
-        vendas.reduce((s, v) => s + v.qtd * v.preco, 0)
-      );
-    }
-
-    function filtrar() {
-      renderizar(document.getElementById('busca').value);
-    }
-
-    renderizar();
-  </script>
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="registrodevendas.js"></script>
 
 </body>
 </html>

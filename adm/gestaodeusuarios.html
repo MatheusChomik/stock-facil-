@@ -27,7 +27,7 @@
       <a href="gestaodeusuarios.html" class="ativo">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -35,7 +35,7 @@
     <h1>Gestão de Usuários</h1>
 
     <div style="margin-bottom: 16px;">
-      <button class="btn btn-primary">+ Novo Usuário</button>
+      <button class="btn btn-primary" id="btnNovoUsuario">+ Novo Usuário</button>
     </div>
 
     <div class="tabela-card">
@@ -48,23 +48,46 @@
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Operador 1</td>
-            <td>operador1@email.com</td>
-            <td>Administrador</td>
-            <td><button class="btn btn-danger btn-sm">Excluir</button></td>
-          </tr>
-          <tr>
-            <td>Operador 2</td>
-            <td>operador2@email.com</td>
-            <td>Operador</td>
-            <td><button class="btn btn-danger btn-sm">Excluir</button></td>
-          </tr>
-        </tbody>
+        <tbody id="tbodyUsuarios"></tbody>
       </table>
     </div>
   </main>
+
+  <!-- Modal novo usuário -->
+  <div class="modal-overlay" id="modalUsuario">
+    <div class="modal">
+      <h2 style="font-size:16px; font-weight:700; margin-bottom:20px;">Novo Usuário</h2>
+      <form id="formUsuario">
+        <div class="form-box" style="padding:0;border:none;background:transparent;max-width:100%;margin-bottom:14px;">
+          <label>Nome</label>
+          <input type="text" id="uNome" required placeholder="Nome completo">
+        </div>
+        <div class="form-box" style="padding:0;border:none;background:transparent;max-width:100%;margin-bottom:14px;">
+          <label>E-mail</label>
+          <input type="email" id="uEmail" required placeholder="email@exemplo.com">
+        </div>
+        <div class="form-box" style="padding:0;border:none;background:transparent;max-width:100%;margin-bottom:14px;">
+          <label>Senha</label>
+          <input type="password" id="uSenha" required minlength="6" placeholder="Mínimo 6 caracteres">
+        </div>
+        <div class="form-box" style="padding:0;border:none;background:transparent;max-width:100%;margin-bottom:20px;">
+          <label>Papel</label>
+          <select id="uPapel">
+            <option value="operador">Operador</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+        <div class="modal-acoes">
+          <button type="button" class="btn btn-secondary" id="btnCancelarUsuario">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Criar Usuário</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="gestaodeusuarios.js"></script>
 
 </body>
 </html>

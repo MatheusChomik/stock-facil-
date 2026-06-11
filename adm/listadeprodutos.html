@@ -27,12 +27,14 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="login.html" id="btnSair">Sair</a>
     </div>
   </aside>
 
   <main class="conteudo">
     <h1>Lista de Produtos</h1>
+
+    <input type="text" id="busca" class="barra-pesquisa" placeholder="Buscar produto pelo nome…">
 
     <div class="tabela-card">
       <table>
@@ -46,33 +48,52 @@
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>#01</td>
-            <td>Arroz Tio Urbano 5kg</td>
-            <td>100</td>
-            <td>10</td>
-            <td>R$ 22,90</td>
-            <td>
-              <button class="btn btn-secondary btn-sm">Editar</button>
-              <button class="btn btn-danger btn-sm">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <td>#02</td>
-            <td>Óleo de Soja 900ml</td>
-            <td>95</td>
-            <td>10</td>
-            <td>R$ 8,50</td>
-            <td>
-              <button class="btn btn-secondary btn-sm">Editar</button>
-              <button class="btn btn-danger btn-sm">Excluir</button>
-            </td>
-          </tr>
+        <tbody id="tbodyProdutos">
+          <tr><td colspan="6" class="vazio">Carregando…</td></tr>
         </tbody>
       </table>
     </div>
   </main>
 
+  <!-- Modal de edição -->
+  <div class="modal-overlay" id="modalEditar">
+    <div class="modal">
+      <h3>Editar Produto</h3>
+      <input type="hidden" id="editId">
+      <label for="editNome">Nome</label>
+      <input type="text" id="editNome">
+
+      <div class="linha-form">
+        <div>
+          <label for="editQuantidade">Estoque</label>
+          <input type="number" id="editQuantidade" min="0">
+        </div>
+        <div>
+          <label for="editMinimo">Estoque Mínimo</label>
+          <input type="number" id="editMinimo" min="0">
+        </div>
+      </div>
+
+      <div class="linha-form">
+        <div>
+          <label for="editCusto">Preço de Custo (R$)</label>
+          <input type="text" id="editCusto" placeholder="0,00">
+        </div>
+        <div>
+          <label for="editVenda">Preço de Venda (R$)</label>
+          <input type="text" id="editVenda" placeholder="0,00">
+        </div>
+      </div>
+
+      <div class="modal-acoes">
+        <button class="btn btn-secondary" id="btnCancelarEdicao">Cancelar</button>
+        <button class="btn btn-primary" id="btnSalvarEdicao">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="listadeprodutos.js"></script>
 </body>
 </html>

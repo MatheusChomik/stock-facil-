@@ -39,7 +39,7 @@
       <a href="gestaodeusuarios.html">Gestão de Usuários</a>
     </nav>
     <div class="sidebar-footer">
-      <a href="login.html">Sair</a>
+      <a href="#" id="btnSair">Sair</a>
     </div>
   </aside>
 
@@ -52,11 +52,11 @@
       <div class="stats">
         <div class="stat-box">
           <p>Total Vendido Hoje</p>
-          <strong>R$ 1.250,00</strong>
+          <strong id="statHoje">—</strong>
         </div>
         <div class="stat-box">
           <p>Ticket Médio</p>
-          <strong>R$ 85,00</strong>
+          <strong id="statTicket">—</strong>
         </div>
       </div>
     </div>
@@ -68,34 +68,9 @@
     </div>
   </main>
 
-  <script>
-    const labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'];
-    const data   = [5200, 7800, 5100, 9500, 8200, 13000];
-    const max    = Math.max(...data);
-
-    document.getElementById('grafico').innerHTML = labels.map((label, i) => `
-      <div class="chart-bar">
-        <span class="bar-label">${label}</span>
-        <div class="bar-track"><div class="bar-fill" style="width:${(data[i]/max)*100}%"></div></div>
-        <span class="bar-value">R$ ${data[i].toLocaleString('pt-BR')}</span>
-      </div>
-    `).join('');
-
-    const produtos = [
-      { nome: 'Arroz Tio Urbano 5kg',  estoque: 3,  minimo: 10 },
-      { nome: 'Feijão Carioca 1kg',    estoque: 1,  minimo: 5  },
-      { nome: 'Óleo de Soja 900ml',    estoque: 12, minimo: 10 },
-      { nome: 'Açúcar Cristal 1kg',    estoque: 0,  minimo: 8  },
-      { nome: 'Macarrão Espaguete',    estoque: 20, minimo: 10 },
-    ];
-
-    document.getElementById('alertas').innerHTML = produtos.map(p => {
-      let badge = `<span class="ok">OK (${p.estoque} un.)</span>`;
-      if (p.estoque === 0)          badge = '<span class="restam">Sem estoque!</span>';
-      else if (p.estoque <= p.minimo) badge = `<span class="restam">Restam ${p.estoque} un.</span>`;
-      return `<div class="alert-item"><span>${p.nome}</span>${badge}</div>`;
-    }).join('');
-  </script>
+  <script src="../assets/db.js"></script>
+  <script src="../assets/auth.js"></script>
+  <script src="painelderelatorio.js"></script>
 
 </body>
 </html>
