@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Login</title>
+  <link rel="stylesheet" href="../assets/login.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-logo">
+      <img src="../assets/logo.png" alt="Stock Fácil">
+    </div>
+    <div class="login-card">
+      <h2>Acessar o Sistema</h2>
+      <p>Controle de Estoque para Empresas</p>
+
+      <div class="login-error" id="loginError">Usuário ou senha incorretos.</div>
+
+      <form id="loginForm">
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" placeholder="seu usuário" required autocomplete="username">
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="••••••••" required autocomplete="current-password">
+
+        <button type="submit">Acessar Sistema</button>
+      </form>
+
+      <p class="esqueceu">Esqueceu a senha?</p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

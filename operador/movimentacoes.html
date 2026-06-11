@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Movimentações</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Stock Fácil">
+    </div>
+    <div class="sidebar-role">Painel do Operador</div>
+    <nav class="sidebar-nav">
+      <a href="painel.html">Painel</a>
+      <a href="atualizar.html">Atualizar Pedidos</a>
+      <a href="movimentacoes.html" class="ativo">Movimentações</a>
+      <a href="envio-entrega.html">Envio e Entrega</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="../adm/login.html">Sair</a>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <h1>Movimentações</h1>
+    <p style="color:var(--text-muted); margin-top:-18px; margin-bottom:24px; font-size:13px;">Entradas e saídas do estoque</p>
+
+    <div style="display:flex; gap:12px; margin-bottom:20px;">
+      <button class="btn btn-primary">+ Nova Entrada</button>
+      <button class="btn btn-secondary">+ Registrar Saída</button>
+    </div>
+
+    <div class="tabela-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Produto</th>
+            <th>Tipo</th>
+            <th>Quantidade</th>
+            <th>Responsável</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>13/04/2026</td>
+            <td>Arroz Tio Urbano 5kg</td>
+            <td><span class="badge badge-entrada">Entrada</span></td>
+            <td>+50 un.</td>
+            <td>Operador 1</td>
+          </tr>
+          <tr>
+            <td>13/04/2026</td>
+            <td>Óleo de Soja 900ml</td>
+            <td><span class="badge badge-saida">Saída</span></td>
+            <td>-12 un.</td>
+            <td>Operador 2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Entrada de Estoque</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Stock Fácil">
+    </div>
+    <div class="sidebar-role">Painel do Administrador</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <span class="nav-section">Gestão de Estoque</span>
+      <a href="cadastrodeprodutos.html">Cadastro de Produtos</a>
+      <a href="listadeprodutos.html">Lista de Produtos</a>
+      <a href="entradadeestoque.html" class="ativo">Entrada de Estoque</a>
+      <span class="nav-section">Operações e Relatórios</span>
+      <a href="registrodevendas.html">Registro de Vendas</a>
+      <a href="painelderelatorio.html">Painel de Relatório</a>
+      <a href="alertasdeestoque.html">Alertas de Estoque</a>
+      <span class="nav-section">Configurações</span>
+      <a href="gestaodeusuarios.html">Gestão de Usuários</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html">Sair</a>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <h1>Entrada de Estoque</h1>
+
+    <div class="form-box">
+      <form>
+        <label>Produto</label>
+        <input type="text" placeholder="Nome ou código do produto">
+
+        <label>Quantidade a Adicionar</label>
+        <input type="number" placeholder="0">
+
+        <button type="submit" class="btn btn-primary">Confirmar Entrada</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Envio e Entrega</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Stock Fácil">
+    </div>
+    <div class="sidebar-role">Painel do Operador</div>
+    <nav class="sidebar-nav">
+      <a href="painel.html">Painel</a>
+      <a href="atualizar.html">Atualizar Pedidos</a>
+      <a href="movimentacoes.html">Movimentações</a>
+      <a href="envio-entrega.html" class="ativo">Envio e Entrega</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="../adm/login.html">Sair</a>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <h1>Envio e Entrega</h1>
+    <p style="color:var(--text-muted); margin-top:-18px; margin-bottom:24px; font-size:13px;">Controle logístico</p>
+
+    <div class="tabela-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Nº Pedido</th>
+            <th>Cliente</th>
+            <th>Endereço</th>
+            <th>Transportadora</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1042</td>
+            <td>Maria Silva</td>
+            <td>Rua das Flores, 123</td>
+            <td>Correios – SEDEX</td>
+            <td><span class="badge badge-enviado">Aprovado</span></td>
+            <td>
+              <button class="btn btn-secondary btn-sm">Ver</button>
+              <button class="btn btn-secondary btn-sm">Rastreio</button>
+            </td>
+          </tr>
+          <tr>
+            <td>#1059</td>
+            <td>Ana Costa</td>
+            <td>Av. Brasil, 456</td>
+            <td>Jadlog</td>
+            <td><span class="badge badge-separacao">Enviado</span></td>
+            <td>
+              <button class="btn btn-primary btn-sm">Confirmar Entrega</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Fácil — Gestão de Usuários</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../assets/logo.png" alt="Stock Fácil">
+    </div>
+    <div class="sidebar-role">Painel do Administrador</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <span class="nav-section">Gestão de Estoque</span>
+      <a href="cadastrodeprodutos.html">Cadastro de Produtos</a>
+      <a href="listadeprodutos.html">Lista de Produtos</a>
+      <a href="entradadeestoque.html">Entrada de Estoque</a>
+      <span class="nav-section">Operações e Relatórios</span>
+      <a href="registrodevendas.html">Registro de Vendas</a>
+      <a href="painelderelatorio.html">Painel de Relatório</a>
+      <a href="alertasdeestoque.html">Alertas de Estoque</a>
+      <span class="nav-section">Configurações</span>
+      <a href="gestaodeusuarios.html" class="ativo">Gestão de Usuários</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="login.html">Sair</a>
+    </div>
+  </aside>
+
+  <main class="conteudo">
+    <h1>Gestão de Usuários</h1>
+
+    <div style="margin-bottom: 16px;">
+      <button class="btn btn-primary">+ Novo Usuário</button>
+    </div>
+
+    <div class="tabela-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Papel</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Operador 1</td>
+            <td>operador1@email.com</td>
+            <td>Administrador</td>
+            <td><button class="btn btn-danger btn-sm">Excluir</button></td>
+          </tr>
+          <tr>
+            <td>Operador 2</td>
+            <td>operador2@email.com</td>
+            <td>Operador</td>
+            <td><button class="btn btn-danger btn-sm">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
